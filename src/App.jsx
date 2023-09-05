@@ -1,18 +1,18 @@
 import * as THREE from "three";
-import {Box} from "./Box";
 import {Canvas} from "@react-three/fiber";
 import {OrbitControls, PointerLockControls, Stats} from '@react-three/drei'
 
 import {Polyhedron} from "./Polyhedron";
 import {Perf} from "r3f-perf";
-import {useMemo} from "react";
-import {Leva, useControls} from 'leva'
+import {Leva} from 'leva'
+import {Lights} from "./Light";
 
 export default function App() {
     return (
         <>
             <Canvas camera={{position:[0, 0, 2]}} frameloop="always">
-                <directionalLight position={[1, 1, 1]} />
+                <Lights />
+
                 <Polyhedron
                     name="meshBasicMaterial"
                     position={[-3, 1, 0]}
