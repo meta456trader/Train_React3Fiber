@@ -1,6 +1,6 @@
-export const Box = () => {
+export const Box = (props) => {
     return (
-        <mesh>
+        <mesh {...props}>
             <boxGeometry/>
             <meshBasicMaterial color={0x00ff00} wireframe/>
         </mesh>
