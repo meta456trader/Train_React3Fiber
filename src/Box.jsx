@@ -38,7 +38,7 @@ export const Box = (props) => {
             onUpdate={(self) => console.log(self)}
         >
             <boxGeometry/>
-            <meshBasicMaterial color={0x00ff00} wireframe/>
+            <meshBasicMaterial color={hovered ? 0xff0000 : 0x00ff00} wireframe />
         </mesh>
     )
 }
