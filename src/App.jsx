@@ -3,6 +3,7 @@ import {Canvas} from "@react-three/fiber";
 import { Stats } from '@react-three/drei'
 import * as THREE from "three";
 import {Polyhedron} from "./Polyhedron";
+import {Perf} from "r3f-perf";
 
 export default function App() {
     const polyhedron  = [
@@ -18,6 +19,7 @@ export default function App() {
             <Polyhedron position={[-0.75, 0.75, 0]} polyhedron={polyhedron} />
             <Polyhedron position={[0.75, 0.75, 0]} polyhedron={polyhedron} />
             <Stats/>
+            <Perf position="top-right" deepAnalyze={true}/>
         </Canvas>
     )
 }
