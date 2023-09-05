@@ -44,6 +44,10 @@ export const Lights = () => {
                 directionalRef.current.color = new THREE.Color(v)
             },
         },
+        castShadow: {
+            value: true,
+            onChange: (v)=>{directionalRef.current.castShadow = v;}
+        },
     })
 
     useControls('Point Light', {
@@ -67,6 +71,10 @@ export const Lights = () => {
                 pointRef.current.color = new THREE.Color(v)
             },
         },
+        castShadow: {
+            value: true,
+            onChange: (v)=>{pointRef.current.castShadow = v;}
+        },
     })
 
     useControls('Spot Light', {
@@ -89,6 +97,10 @@ export const Lights = () => {
             onChange: (v) => {
                 spotRef.current.color = new THREE.Color(v)
             },
+        },
+        castShadow: {
+            value: true,
+            onChange: (v)=>{spotRef.current.castShadow = v;}
         },
     })
 

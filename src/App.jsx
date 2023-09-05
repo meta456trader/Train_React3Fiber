@@ -6,11 +6,12 @@ import {Polyhedron} from "./Polyhedron";
 import {Perf} from "r3f-perf";
 import {Leva} from 'leva'
 import {Lights} from "./Light";
+import Floor from "./Floor";
 
 export default function App() {
     return (
         <>
-            <Canvas camera={{position:[0, 0, 2]}} frameloop="always">
+            <Canvas camera={{position:[0, 0, 2]}} frameloop="always" shadows>
                 <Lights />
 
                 <Polyhedron
@@ -33,6 +34,8 @@ export default function App() {
                     position={[3, 1, 0]}
                     material={new THREE.MeshStandardMaterial()}
                 />
+                <Floor/>
+
                 <OrbitControls target-y={1} />
                 <axesHelper args={[5]} />
                 <gridHelper />

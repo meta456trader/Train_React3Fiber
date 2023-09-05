@@ -37,6 +37,7 @@ export const Polyhedron = ({color, polyhedron, ...props}) => {
         <mesh
             {...props}
             ref={ref}
+            castShadow receiveShadow
         >
             <icosahedronGeometry args={[1, 1]} />
         </mesh>
