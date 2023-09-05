@@ -18,8 +18,11 @@ export default function App() {
             <Polyhedron position={[0.75, -0.75, 0]} polyhedron={polyhedron} />
             <Polyhedron position={[-0.75, 0.75, 0]} polyhedron={polyhedron} />
             <Polyhedron position={[0.75, 0.75, 0]} polyhedron={polyhedron} />
-            {/*<OrbitControls enableDamping={true}/>*/}
-            <PointerLockControls />
+            <OrbitControls enableDamping={true}/>
+            <axesHelper />
+            <gridHelper />
+            <gridHelper args={[20, 20, 0xff0000, 'teal']} />
+            {/*<PointerLockControls />*/}
             <Stats/>
             <Perf position="top-right" deepAnalyze={true}/>
         </Canvas>
