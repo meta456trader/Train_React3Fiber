@@ -1,6 +1,6 @@
 import {Box} from "./Box";
 import {Canvas} from "@react-three/fiber";
-import {OrbitControls, Stats} from '@react-three/drei'
+import {OrbitControls, PointerLockControls, Stats} from '@react-three/drei'
 import * as THREE from "three";
 import {Polyhedron} from "./Polyhedron";
 import {Perf} from "r3f-perf";
@@ -18,7 +18,8 @@ export default function App() {
             <Polyhedron position={[0.75, -0.75, 0]} polyhedron={polyhedron} />
             <Polyhedron position={[-0.75, 0.75, 0]} polyhedron={polyhedron} />
             <Polyhedron position={[0.75, 0.75, 0]} polyhedron={polyhedron} />
-            <OrbitControls enableDamping={true}/>
+            {/*<OrbitControls enableDamping={true}/>*/}
+            <PointerLockControls />
             <Stats/>
             <Perf position="top-right" deepAnalyze={true}/>
         </Canvas>
