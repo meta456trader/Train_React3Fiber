@@ -27,6 +27,10 @@ export const Box = (props) => {
         }
     })
 
+    useEffect(() => {
+        console.log(ref.current.geometry.uuid)
+    })
+
     return (
         <mesh
             {...props}
