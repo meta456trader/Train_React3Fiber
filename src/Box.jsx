@@ -6,7 +6,7 @@ export const Box = (props) => {
     const ref = useRef();
 
     const [hovered, setHover] = useState(false)
-    const [rotate, setRotate] = useState(true)
+    const [rotate, setRotate] = useState(false)
 
     useEffect(()=>{
         console.log("ref: ", ref);
@@ -42,11 +42,9 @@ export const Box = (props) => {
         <mesh
             {...props}
             ref={ref}
-            scale={hovered ? [1.1, 1.1, 1.1] : [1, 1, 1]}
-            onPointerDown={() => setCount((count + 1) % 2)}
-            geometry={geometryGOOD[count]}
+            geometry={geometryGOOD[0]}
         >
-            <meshBasicMaterial color={hovered ? 0xff0000 : 0x00ff00} wireframe />
+            <meshBasicMaterial color={hovered ? 0xff0000 : 0x00ff00}  />
         </mesh>
     )
 }
